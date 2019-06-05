@@ -2,26 +2,6 @@ body {
     max-width: 1500px;
     margin: auto;
     font-family: "Open Sans";
-    background-color: rgb(213, 231, 199);
-}
-
-header {
-    text-align: center;
-    background-image: url("images/Murmeltier.jpg");
-    background-position: 5 35%;
-}
-
-header h2 {
-    font-size: 4em;
-    color: white;
-    margin: 0;
-    padding: 2.5em 0;
-}
-
-header h3 {
-    font-size: 2em;
-    margin: 0;
-    color: white;
 }
 
 .navbar {
@@ -101,12 +81,8 @@ main {
     margin: auto;
 }
 
-.Aktivitäten
-{
-float: left;
-width: 300px;
-padding: 5px;
-font-size: 0.7em;
+main img {
+    width: 65%;
 }
 
 #map {

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Erlebnis Hohe Tauern</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Schriftart ändern-->
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+
+    <!--Leaflet-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+
+    <!--Fullscreen von der Internetseite github leaflet FULLSCREEN-->
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+        rel='stylesheet' />
+
+    <!--Quelle für Kartenlayer - steht unten an der Karte-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-hash/0.2.1/leaflet-hash.js"></script>
+
+    <!--Plugins: Koordinaten anzeigen lassen-->
+    <link href="plugins/Control.Coordinates.css" rel="stylesheet">
+    <script src="plugins/Control.Coordinates.js"></script>
+
+
+    <!-- Track einbinden -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js"></script>
+
+    <!-- Vorarbeit Höhenprofil -->
+    <script src="https://unpkg.com/d3@4.13.0/build/d3.min.js" charset="utf-8"></script>
+
+    <!-- Höhenprofil einbinden -->
+    <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@latest/leaflet-elevation.css" />
+    <script src="https://unpkg.com/@raruto/leaflet-elevation@latest/leaflet-elevation.js"></script>
+
+
+    <script src="blicke.js"></script>
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    
+    <div class="navbar">
+        <a href="../hohetauern/index.html">
+            <strong>Home</strong>
+        </a>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <strong>Aktivitäten</strong>
+                <svg class="svg-inline--fa fa-caret-down fa-w-10" aria-hidden="true" data-prefix="fa"
+                    data-icon="caret-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                    data-fa-i2svg="">
+                    <path fill="currentColor"
+                        d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z">
+                    </path>
+                </svg><!-- <i class="fa fa-caret-down"></i> -->
+            </button>
+            <div class="dropdown-content">
+                <a href="../Frankenradweg/index.html">
+                    <!-- Ebike und naturlehrpfade (evtl sehnswürdigkeiten auf dem weg) -->
+                    <strong>Frankenradweg</strong>
+                </a>
+                <a href="../RomantischeStraße/index.html">
+                    <strong>Romantische Straße</strong>
+                </a>
+                <a href="../BodenseeKoenigssee/index.html">
+                    <strong>Bodensee - Königssee</strong>
+                </a>
+                <a href="index.html">
+                    <strong>Mainradweg</strong>
+                </a>
+            </div>
+        </div>
+        <a href="../../impressum/impressum.html">
+            <!-- Über uns seite -->
+            <strong>Über uns</strong>
+        </a>
+    </div>
+    <main>
+        <h1>Steile Berge? Kein Problem auf deiner E-Bike Tour!</h1>
+        <img src="images/EBiker.jpg" alt="Biker">
+        <p>
+            Im Nationalpark Hohe Tauern sind alle bedeutenden alpinen Ökosysteme großflächig und ungestört erhalten.
+            Mehr als ein Drittel aller in Österreich nachgewiesenen Pflanzenarten kommen im Nationalpark vor. Bei den
+            Säugetieren, Vögeln, Reptilien und Amphibien sind es um die 50 %. Auch jenen Tieren, welche zu Beginn des
+            19. Jahrhunderts in fast ganz Europa ausgerottet waren, bietet der Nationalpark nunmehr einen gesicherten
+            Lebensraum.
+
+            Diese beeindruckende Biodiversität resultiert aus den vielfältigen klimatischen, geologischen,
+            geomorphologischen und hydrologischen Standortbedingungen im Hochgebirge und den differenzierten
+            Anpassungsstrategien der Pflanzen und Tiere.
+
+            Wer von den Tälern zu den höchsten Gipfeln des Nationalparks wandert, durchquert in den Höhenstufen
+            gleichsam alle Klimazonen von Mitteleuropa bis in die Arktis.
+
+            Das Tauernfenster – ein in Form und Größe weltweit einzigartiges tektonisches Fenster – gewährt Einblicke in
+            das tiefste tektonische Stockwerk der Alpen und ist damit der Schlüssel für das Verständnis des geologischen
+            Aufbaus der Alpen. Gesteine unterschiedlichen Alters, unterschiedlicher Entstehung und unterschiedlicher
+            chemischer Zusammensetzung beherbergen einen wahren Schatz an bis zu 200 verschiedenen Mineralien. Quelle:
+            <a href="https://hohetauern.at/de/natur/nationalpark.html">hohetauern.at</a>
+        </p>
+
+        
+            <h2>Anreise</h2>
+            Am bequemsten und umweltfreundlichsten erreichen Sie den Nationalpark Hohe Tauern mit der Bahn. Das
+            Zugfahren ermöglicht auch eine stressfreie Reise ohne großes Verkehrsaufkommen oder Stau. Die <a
+                href="https://www.pinzgauerlokalbahn.at/content/website_pinzgauerlokalbahn/de_at.html">Pinzgauer
+                Lokalbahn</a> oder "Nationalparkbahn" führt von Zell am See bis Krimml und ist das ideale
+            Transportmittel um die Region zu entdecken. Nostalgiefahrten mit der alten Dampflok sind besonders beliebt. Auch die Radfahrer
+            schätzen die Schmalspurbahn sehr, um zum Ausgangspunkt des Tauernradweges zu gelangen. Die Schmalspurbahn,
+            welche heute über modernste Niederflurfahrzeuge verfügt, ist für den Oberpinzgau ein unverzichtbares
+            Transportmittel geworden. Ob für den Weg zur Arbeit, Schule oder zum Wandern, Skifahren und Ausflüge machen,
+            die Pinzgauer Lokalbahn ist im Stundentakt mit bis zu 80 km/h unterwegs. Quelle:
+            <a href="https://www.nationalpark.at/de/service/lage-anreise/bahn/">nationalpark.at</a>
+            
+        </p>
+
+        <h3>Streckeninformation</h3>
+       
+
+        <h3>Links</h3>
+        <ul>
+            <li><a href="https://www.bergwelten.com/t/w/14141">Etappe 03: Hintersteiner See - Kufstein</a></li>
+            <li><a href="https://www.wilderkaiser.info/de/routen/details/hintersteiner-see-rundweg.html">Hintersteiner
+                    See-Rundweg</a></li>
+            <li><a href="http://www.kufstein.at/de/kufstein-erobert.html">Kufstein</a></li>
+            <li><a
+                    href="https://www.tirol.at/reisefuehrer/sport/wandern/adlerweg?gclid=EAIaIQobChMI59Hg_8yi4QIVl-F3Ch0OHQMMEAAYASAAEgLOPfD_BwE">Adlerweg-
+                    Tirols bekanntester Wanderweg</a></li>
+        </ul>
+
+
+    </main>
+
+    <hr />
+
+    <footer>
+        <nav>
+            <a class=next href="https://antoniamoschin.github.io/adler/index.html"></i>nächste Etappe<i
+                    class="fas fa-arrow-right"></i></a>
+        </nav>
+
+    </footer>
+
+</body>
+
+</html>
