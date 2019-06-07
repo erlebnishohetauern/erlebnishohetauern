@@ -17,32 +17,11 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 
-    <!--Fullscreen von der Internetseite github leaflet FULLSCREEN-->
-    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
-        rel='stylesheet' />
-
-    <!--Quelle für Kartenlayer - steht unten an der Karte-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-hash/0.2.1/leaflet-hash.js"></script>
-
-    <!--Plugins: Koordinaten anzeigen lassen-->
-    <link href="plugins/Control.Coordinates.css" rel="stylesheet">
-    <script src="plugins/Control.Coordinates.js"></script>
+      <!--Main.js und css.js einbinden-->
+      <link rel="stylesheet" href="main.css">
+      <script defer src="main.js"></script>
 
 
-    <!-- Track einbinden -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js"></script>
-
-    <!-- Vorarbeit Höhenprofil -->
-    <script src="https://unpkg.com/d3@4.13.0/build/d3.min.js" charset="utf-8"></script>
-
-    <!-- Höhenprofil einbinden -->
-    <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@latest/leaflet-elevation.css" />
-    <script src="https://unpkg.com/@raruto/leaflet-elevation@latest/leaflet-elevation.js"></script>
-
-
-    <script src="blicke.js"></script>
-    <script defer src="main.js"></script>
 </head>
 
 <body>
@@ -112,21 +91,25 @@
         </p>
 
         <h2>Aktivitäten</h2>
+       
+            <div class="Aktivitäten">
+                <img src="images/Naturlehrpfad.jpg" width="300" height="250" border="0" alt="Naturlehrpfad">
+                Bilduntertext zur Rose 1
+            </div>
 
-        <div class="Aktivitäten">
-            <img src="images/Naturlehrpfad.jpg" width="300" height="250" border="0" alt="Naturlehrpfad">
-            Bilduntertext zur Rose 1
-        </div>
+            <div class="Aktivitäten">
+                    <img src="images/Biker.jpg" width="300" height="250" border="0" alt="Biker">
+                    Erfahren Sie Sehenswürdigkeiten, die schönsten Aussichtspunkte und kulturelle Highlights
+                    mit dem Elektrofahrrad. Optimal ausgebaute Radwege - fern ab jeder Hauptstraße - bringen Sie in den
+                    Nationalpark Hohe Tauern.
+                    
+            </div>
 
-        <div class="Aktivitäten">
-            <img src="images/Biker.jpg" width="300" height="250" border="0" alt="Biker">
-            Bilduntertext zur Rose 2 und Zusatztext zur Rose 2
-        </div>
-
-        <div class="Aktivitäten">
-            <img src="images/Sehenswertes.jpg" width="300" height="250" border="0" alt="Sehenswertes">
-            Bilduntertext zur Rose 3
-        </div>
+            <div class="Aktivitäten">
+                <img src="images/Sehenswertes.jpg" width="300" height="250" border="0" alt="Sehenswertes">
+                Bilduntertext zur Rose 3
+            </div>
+       
         <br>
 
         <p>
@@ -147,17 +130,18 @@
             Zugfahren ermöglicht auch eine stressfreie Reise ohne großes Verkehrsaufkommen oder Stau. Die <a
                 href="https://www.pinzgauerlokalbahn.at/content/website_pinzgauerlokalbahn/de_at.html">Pinzgauer
                 Lokalbahn</a> oder "Nationalparkbahn" führt von Zell am See bis Krimml und ist das ideale
-            Transportmittel um die Region zu entdecken. Nostalgiefahrten mit der alten Dampflok sind besonders beliebt. Auch die Radfahrer
+            Transportmittel um die Region zu entdecken. Nostalgiefahrten mit der alten Dampflok sind besonders beliebt.
+            Auch die Radfahrer
             schätzen die Schmalspurbahn sehr, um zum Ausgangspunkt des Tauernradweges zu gelangen. Die Schmalspurbahn,
             welche heute über modernste Niederflurfahrzeuge verfügt, ist für den Oberpinzgau ein unverzichtbares
             Transportmittel geworden. Ob für den Weg zur Arbeit, Schule oder zum Wandern, Skifahren und Ausflüge machen,
             die Pinzgauer Lokalbahn ist im Stundentakt mit bis zu 80 km/h unterwegs. Quelle:
             <a href="https://www.nationalpark.at/de/service/lage-anreise/bahn/">nationalpark.at</a>
-            
+
         </p>
 
         <h3>Streckeninformation</h3>
-       
+
 
         <h3>Links</h3>
         <ul>
