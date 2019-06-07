@@ -29,6 +29,9 @@
     <link href="plugins/Control.Coordinates.css" rel="stylesheet">
     <script src="plugins/Control.Coordinates.js"></script>
 
+    <!--Main.js und css.js einbinden-->
+    <link rel="stylesheet" href="main.css">
+    <script defer src="main.js"></script>
 
     <!-- Track einbinden -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js"></script>
@@ -40,13 +43,10 @@
     <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@latest/leaflet-elevation.css" />
     <script src="https://unpkg.com/@raruto/leaflet-elevation@latest/leaflet-elevation.js"></script>
 
-
-    <script src="blicke.js"></script>
-    <script defer src="main.js"></script>
 </head>
 
 <body>
-    
+
     <div class="navbar">
         <a href="../hohetauern/index.html">
             <strong>Home</strong>
@@ -85,56 +85,21 @@
     </div>
     <main>
         <h1>Steile Berge? Kein Problem auf deiner E-Bike Tour!</h1>
-        <img src="images/EBiker.jpg" alt="Biker">
         <p>
-            Im Nationalpark Hohe Tauern sind alle bedeutenden alpinen Ökosysteme großflächig und ungestört erhalten.
-            Mehr als ein Drittel aller in Österreich nachgewiesenen Pflanzenarten kommen im Nationalpark vor. Bei den
-            Säugetieren, Vögeln, Reptilien und Amphibien sind es um die 50 %. Auch jenen Tieren, welche zu Beginn des
-            19. Jahrhunderts in fast ganz Europa ausgerottet waren, bietet der Nationalpark nunmehr einen gesicherten
-            Lebensraum.
-
-            Diese beeindruckende Biodiversität resultiert aus den vielfältigen klimatischen, geologischen,
-            geomorphologischen und hydrologischen Standortbedingungen im Hochgebirge und den differenzierten
-            Anpassungsstrategien der Pflanzen und Tiere.
-
-            Wer von den Tälern zu den höchsten Gipfeln des Nationalparks wandert, durchquert in den Höhenstufen
-            gleichsam alle Klimazonen von Mitteleuropa bis in die Arktis.
-
-            Das Tauernfenster – ein in Form und Größe weltweit einzigartiges tektonisches Fenster – gewährt Einblicke in
-            das tiefste tektonische Stockwerk der Alpen und ist damit der Schlüssel für das Verständnis des geologischen
-            Aufbaus der Alpen. Gesteine unterschiedlichen Alters, unterschiedlicher Entstehung und unterschiedlicher
-            chemischer Zusammensetzung beherbergen einen wahren Schatz an bis zu 200 verschiedenen Mineralien. Quelle:
-            <a href="https://hohetauern.at/de/natur/nationalpark.html">hohetauern.at</a>
+            Den Nationalpark Hohe Tauern mit dem Rad erleben? Bei uns kein Problem! Egal, ob geübte(r)
+            MountainbikerIn oder gemütliche(r) E-Bike FahrerIn, auf unseren Routen ist für jeden etwas dabei. Bei uns
+            erleben
+            Sie grenzenlose
+            Mobilität durch die perfekte Kombination aus gut erschlossenen Radwegen und einer Vielzahl von Verleih- und
+            Akkuwechselstationen.
         </p>
+        <img src="images/EBiker.jpg" alt="Biker">
 
+        <h3>E-Bike Routen</h3>
         
-            <h2>Anreise</h2>
-            Am bequemsten und umweltfreundlichsten erreichen Sie den Nationalpark Hohe Tauern mit der Bahn. Das
-            Zugfahren ermöglicht auch eine stressfreie Reise ohne großes Verkehrsaufkommen oder Stau. Die <a
-                href="https://www.pinzgauerlokalbahn.at/content/website_pinzgauerlokalbahn/de_at.html">Pinzgauer
-                Lokalbahn</a> oder "Nationalparkbahn" führt von Zell am See bis Krimml und ist das ideale
-            Transportmittel um die Region zu entdecken. Nostalgiefahrten mit der alten Dampflok sind besonders beliebt. Auch die Radfahrer
-            schätzen die Schmalspurbahn sehr, um zum Ausgangspunkt des Tauernradweges zu gelangen. Die Schmalspurbahn,
-            welche heute über modernste Niederflurfahrzeuge verfügt, ist für den Oberpinzgau ein unverzichtbares
-            Transportmittel geworden. Ob für den Weg zur Arbeit, Schule oder zum Wandern, Skifahren und Ausflüge machen,
-            die Pinzgauer Lokalbahn ist im Stundentakt mit bis zu 80 km/h unterwegs. Quelle:
-            <a href="https://www.nationalpark.at/de/service/lage-anreise/bahn/">nationalpark.at</a>
-            
-        </p>
+        <div id="map" data-lat="47.12" data-lng="12.50" data-title="Nationalpark Hohe Tauern" >
+        </div>
 
-        <h3>Streckeninformation</h3>
-       
-
-        <h3>Links</h3>
-        <ul>
-            <li><a href="https://www.bergwelten.com/t/w/14141">Etappe 03: Hintersteiner See - Kufstein</a></li>
-            <li><a href="https://www.wilderkaiser.info/de/routen/details/hintersteiner-see-rundweg.html">Hintersteiner
-                    See-Rundweg</a></li>
-            <li><a href="http://www.kufstein.at/de/kufstein-erobert.html">Kufstein</a></li>
-            <li><a
-                    href="https://www.tirol.at/reisefuehrer/sport/wandern/adlerweg?gclid=EAIaIQobChMI59Hg_8yi4QIVl-F3Ch0OHQMMEAAYASAAEgLOPfD_BwE">Adlerweg-
-                    Tirols bekanntester Wanderweg</a></li>
-        </ul>
 
 
     </main>
