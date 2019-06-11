@@ -45,18 +45,7 @@ karte.on('click', function (e) {
     coords.setCoordinates(e);
 });
 
-L.geoJson()
-//Funktion hinzufügen, damit verschiedene Atrribute des Popup eingebunden werden
-.bindPopup(function (displayFieldName) {
-    //console.log("Layer:", layer);
-    return `<h4>${displayFieldName.fieldAliases}</h4>
-    Name: ${displayFieldName.fieldAliases.name_de} m <br>
-    Temperatur: ${layer.feature.properties.LT} °C <br>
-    Datum: ${date.toLocaleDateString("de-AT")}
-    ${date.toLocaleTimeString("de-AT")} <br>
-    Windgeschwindigkeit:${layer.feature.properties.WG ? layer.feature.properties.WG + ' km/h' : ' keine Daten'}
-    <hr>
-    <footer>Quelle: Land Tirol - <a href="https://data.tirol.gv.at">data.tirol.gv.at</a></footer>
-    `;
-}) //Windgeschwindigkeit mit if abfrage, wenn keine Daten vorhanden sind
-.addTo(awsTirol);
+
+console.log(lehrpfad); 
+const wandern = L.featuregroup();
+L.geoJson(lehrpfad).addTo(karte); 
