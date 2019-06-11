@@ -47,5 +47,4 @@ karte.on('click', function (e) {
 
 
 console.log(lehrpfad); 
-const wandern = L.featuregroup();
-L.geoJson(lehrpfad).addTo(karte); 
+const wandern = L.featuregroup().addTo(karte); 
