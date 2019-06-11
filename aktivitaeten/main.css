@@ -1,5 +1,5 @@
 body {
-    max-width: 1500px;
+    max-width: 100%;
     margin: auto;
     font-family: "Open Sans";
 }
@@ -31,6 +31,8 @@ body {
   
   /* Dropdown button */
   .dropdown .dropbtn {
+    width: 5%;
+    height:  5%;
     font-size: 16px; 
     border: none;
     outline: none;

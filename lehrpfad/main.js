@@ -35,16 +35,88 @@ karte.setView(
     10
 );
 
-//Fullscreen
 karte.addControl(new L.Control.Fullscreen());
 
-//Mit Mausklick Koordinaten anzeigen lassen
-var coords = new L.Control.Coordinates();
-coords.addTo(karte);
-karte.on('click', function (e) {
-    coords.setCoordinates(e);
-});
+karte.setView([47.25, 11.416667], 9);
+
+// https://github.com/Norkart/Leaflet-MiniMap
+new L.Control.MiniMap(
+    L.tileLayer("https://{s}.wien.gv.at/basemap/geolandbasemap/normal/google3857/{z}/{y}/{x}.png", {
+        subdomains: ["maps", "maps1", "maps2", "maps3", "maps4"],
+    }), {
+        zoomLevelOffset: -4,
+        toggleDisplay: true,
+        minimized: true
+    }
+).addTo(karte);
+
+// die Implementierung der Karte startet hier
 
 
-console.log(lehrpfad); 
-const wandern = L.featuregroup().addTo(karte); 
+//GPX GRuppe erstellen und Menü
+let lehrweg = L.featureGroup().addTo(karte);
+layerControl.addOverlay(lehrweg, "lehrpfad");
+
+//Höhenprofil intitalisieren
+let controlElevation = null;
+
+    //GPX Track laden
+    console.log(lehrpfad.features.geometry);
+
+   lehrweg.clearLayers(); //nur einen Track anzeigen und der der vorher angezeigt wurde wird nicht mehr angezeigt
+    const lehrpfade = new L.GPX(`lehrpfade${lehrpfad.feature.geometry}.gpx`, {
+        async: true,
+        marker_options: {
+            startIconUrl: 'icons/pin-icon-start.png',
+            endIconUrl: 'icons/pin-icon-end.png',
+            shadowUrl: 'icons/pin-shadow.png',
+            iconSize: [32, 37]
+        }
+    }).addTo(lehrweg);
+
+   lehrweg.on("loaded", function () {
+        // karte.fitBounds(gpxTrack.getBounds());
+    });
+    //Höhenprofil zeichnen das sich aktualisiert
+
+    lehrweg.on("addline", function (evt) {
+        //damit immer nur eine Elevation angezeigt wird/ bestehendes Profil löschen
+        if (controlElevation) {
+            controlElevation.clear();
+            document.getElementById("elevation-div").innerHTML = "";
+        }
+        controlElevation = L.control.elevation({
+            theme: "steelblue-theme",
+            detachedView: true,
+            elevationDiv: "#elevation-div"
+        })
+        controlElevation.addTo(karte);
+        controlElevation.addData(evt.line);
+    })
+
+etappeErzeugen(0);
+
+pulldown.onchange = function (evt) {
+    let opts = evt.target.options;
+    console.log(opts[opts.selectedIndex].value);
+    console.log(opts[opts.selectedIndex].text);
+    etappeErzeugen(opts[opts.selectedIndex].value);
+}
+//Route berechnen in Karte (auf Karte klick für Start und Ende und dann Route anzeigen lassen)
+const routingMachine = L.Routing.control({}).addTo(karte);
+let start, end;
+karte.on("click", function (ev) {
+
+    console.log("Clicked: ", ev.latlng);
+    if (!start) {
+        start = ev.latlng;
+        alert("Start gesetzt, bitte 2. Punkt für Ende setzen."); 
+    } else {
+        end = ev.latlng;
+        routingMachine.setWaypoints([start, end]);
+        routingMachine.route();
+        start = null;       //Anfangspunkt (erster Click) wird wieder auf Null gesetzt
+    }
+
+    console.log("Start: ", start, "End: ", end);
+})
