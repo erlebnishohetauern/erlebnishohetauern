@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Erlebnis Hohe Tauern</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Schriftart ändern-->
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+
+    <!--Leaflet-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+
+    <!--Fullscreen von der Internetseite github leaflet FULLSCREEN-->
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+        rel='stylesheet' />
+
+    <!--Quelle für Kartenlayer - steht unten an der Karte-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-hash/0.2.1/leaflet-hash.js"></script>
+
+    <!--Plugins: Koordinaten anzeigen lassen-->
+    <link href="plugins/Control.Coordinates.css" rel="stylesheet">
+    <script src="plugins/Control.Coordinates.js"></script>
+
+    <!--Main.js und css.js einbinden-->
+    <link rel="stylesheet" href="main.css">
+    <script defer src="main.js"></script>
+
+    <!-- Track einbinden -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js"></script>
+
+    <!-- Vorarbeit Höhenprofil -->
+    <script src="https://unpkg.com/d3@4.13.0/build/d3.min.js" charset="utf-8"></script>
+
+    <!-- Höhenprofil einbinden -->
+    <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@latest/leaflet-elevation.css" />
+    <script src="https://unpkg.com/@raruto/leaflet-elevation@latest/leaflet-elevation.js"></script>
+
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="../hohetauern/index.html">
+            <strong>Home</strong>
+        </a>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <strong>Aktivitäten</strong>
+                <svg class="svg-inline--fa fa-caret-down fa-w-10" aria-hidden="true" data-prefix="fa"
+                    data-icon="caret-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                    data-fa-i2svg="">
+                    <path fill="currentColor"
+                        d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z">
+                    </path>
+                </svg><!-- <i class="fa fa-caret-down"></i> -->
+            </button>
+            <div class="dropdown-content">
+                <a href="../Frankenradweg/index.html">
+                    <!-- Ebike und naturlehrpfade (evtl sehnswürdigkeiten auf dem weg) -->
+                    <strong>Frankenradweg</strong>
+                </a>
+                <a href="../RomantischeStraße/index.html">
+                    <strong>Romantische Straße</strong>
+                </a>
+                <a href="../BodenseeKoenigssee/index.html">
+                    <strong>Bodensee - Königssee</strong>
+                </a>
+                <a href="index.html">
+                    <strong>Mainradweg</strong>
+                </a>
+            </div>
+        </div>
+        <a href="../../impressum/impressum.html">
+            <!-- Über uns seite -->
+            <strong>Über uns</strong>
+        </a>
+    </div>
+    <main>
+        <h1>Steile Berge? Kein Problem auf deiner E-Bike Tour!</h1>
+        <p>
+            Den Nationalpark Hohe Tauern mit dem Rad erleben? Bei uns kein Problem! Egal, ob geübte(r)
+            MountainbikerIn oder gemütliche(r) E-Bike FahrerIn, auf unseren Routen ist für jeden etwas dabei. Bei uns
+            erleben
+            Sie grenzenlose
+            Mobilität durch die perfekte Kombination aus gut erschlossenen Radwegen und einer Vielzahl von Verleih- und
+            Akkuwechselstationen.
+        </p>
+        <img src="images/EBiker.jpg" alt="Biker">
+
+        <h3>E-Bike Routen</h3>
+        
+        <div id="map" data-lat="47.12" data-lng="12.50" data-title="Nationalpark Hohe Tauern" >
+        </div>
+
+
+
+    </main>
+
+    <hr />
+
+    <footer>
+        <nav>
+            <a class=next href="https://antoniamoschin.github.io/adler/index.html"></i>nächste Etappe<i
+                    class="fas fa-arrow-right"></i></a>
+        </nav>
+
+    </footer>
+
+</body>
+
+</html>
