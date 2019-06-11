@@ -1,0 +1,118 @@
+    
+/*Body gesamt*/
+* {
+  box-sizing: border-box;
+}
+body {
+  max-width: 100%;
+  margin: 0;
+  font-family: "Open Sans";
+  background-color: whitesmoke;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: green;
+    font-family: Arial;
+    top: 0;
+    width: 100%;
+}
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+    margin-left: 90px;
+    
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px; 
+    border: none;
+    outline: none;
+    color: rgb(100, 187, 29);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: whitesmoke;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(100, 187, 29);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+main {
+    width: 70%;
+    margin: auto;
+}
+
+main img {
+    width: 65%;
+}
+
+#map {
+    height: 360px;
+    width: 90%;
+    border: 1px solid black;
+}
+
+.back {
+    float: left;
+}
+
+.next {
+    float: right;
+}
+
+footer {
+    padding: 1em 0 3em 0;
+}
+
+@media only screen and (max-width: 1300px) {
+    main figure figcaption {
+        float: none;
+        margin-left: 0;
+        width: auto;
+    }
+}
