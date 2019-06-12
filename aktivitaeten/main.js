@@ -42,7 +42,7 @@ karte.setView(
 let bike = L.featureGroup().addTo(karte);
 layerControl.addOverlay(bike, "Ebike");
 
-//karte.fitBounds(bike.getBounds());
+
 
 //Höhenprofil intitalisieren
 //let controlElevation = null;
@@ -60,8 +60,12 @@ const biken = new L.GPX("ebike.gpx", {
         iconSize: [32, 37]
     }}).on("loaded", function (e) {
 karte.fitBounds(e.target.getBounds());
-}).addTo(bike);
+}).addTo(bike).bindPopup("Hallo");
 
+for (let name of Ebike) {
+   biken.on("loaded", function (e) {
+    karte.bindPopup("Test")})
+};
 //Höhenprofil zeichnen das sich aktualisiert
 
 bike.on("addline", function (evt) {

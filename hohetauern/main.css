@@ -1,3 +1,5 @@
+
+
 body {
     max-width: 100%;
     margin: auto;
@@ -60,7 +62,7 @@ header h3 {
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 90; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
   }
   
   /* Add a red background color to navbar links on hover */

@@ -46,8 +46,6 @@ karte.setView([47.25, 11.416667], 9);
 let lehrweg = L.featureGroup().addTo(karte);
 layerControl.addOverlay(lehrweg, "Naturlehrpfad");
 
-//Höhenprofil intitalisieren
-//let controlElevation = null;
 
 //GPX Track laden
 console.log(lehrpfad.features.geometry);
@@ -59,63 +57,10 @@ const lehrpfade = new L.GPX("lehrpfad.gpx", {
         endIconUrl: 'icons/pin-icon-end.png',
         shadowUrl: 'icons/pin-shadow.png',
         iconSize: [32, 37]
-    }
-}).addTo(lehrweg);
+    }}).on("loaded", function (e) {
+karte.fitBounds(e.target.getBounds());
+}).addTo(bike).bindPopup("Hallo");
 
-lehrweg.on("loaded", function () {
-karte.fitBounds(lehrweg.getBounds());
-});
 
-for (let lehrweg of lehrpfad) {
-    let lehrpin = L.marker(
-        [lehrweg.lat, lehrweg.lng]
-    ).addTo(lehrweg);
-    lehrpin.bindPopup(
-        `<h1>Standort ${blick.standort}</h1>
-         <p>Höhe: ${blick.seehoehe} m</p>
-         <em>Kunde: ${blick.kunde}</em>`
-    );
-}
-//Höhenprofil zeichnen das sich aktualisiert
 
-lehrweg.on("addline", function (evt) {
-    //damit immer nur eine Elevation angezeigt wird/ bestehendes Profil löschen
-    if (controlElevation) {
-        controlElevation.clear();
-        document.getElementById("elevation-div").innerHTML = "";
-    }
-    controlElevation = L.control.elevation({
-        theme: "steelblue-theme",
-        detachedView: true,
-        elevationDiv: "#elevation-div"
-    })
-    controlElevation.addTo(karte);
-    controlElevation.addData(evt.line);
-})
 
-// etappeErzeugen(0);
-
-// pulldown.onchange = function (evt) {
-//     let opts = evt.target.options;
-//     console.log(opts[opts.selectedIndex].value);
-//     console.log(opts[opts.selectedIndex].text);
-//     etappeErzeugen(opts[opts.selectedIndex].value);
-// }
-// //Route berechnen in Karte (auf Karte klick für Start und Ende und dann Route anzeigen lassen)
-// const routingMachine = L.Routing.control({}).addTo(karte);
-// let start, end;
-// karte.on("click", function (ev) {
-
-//     console.log("Clicked: ", ev.latlng);
-//     if (!start) {
-//         start = ev.latlng;
-//         alert("Start gesetzt, bitte 2. Punkt für Ende setzen.");
-//     } else {
-//         end = ev.latlng;
-//         routingMachine.setWaypoints([start, end]);
-//         routingMachine.route();
-//         start = null; //Anfangspunkt (erster Click) wird wieder auf Null gesetzt
-//     }
-
-//     console.log("Start: ", start, "End: ", end);
-// })
