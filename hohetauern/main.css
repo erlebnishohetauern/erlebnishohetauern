@@ -105,14 +105,12 @@ main {
     margin: auto;
 }
 
-.Aktivitäten {
-float: left;
-width: 200px;
-padding: 5px;
-font-size: 0.7em;
-} 
+.row h2 {
+  font-weight: 600;
+  height: 5px;
+}
 
-/* Create two equal columns that floats next to each other */
+/* Create three equal columns that floats next to each other */
 .column {
   float: left;
   width: 20%;
