@@ -44,7 +44,7 @@ karte.setView([47.25, 11.416667], 9);
 
 //GPX GRuppe erstellen und Menü
 let lehrweg = L.featureGroup().addTo(karte);
-layerControl.addOverlay(lehrweg, "lehrpfad");
+layerControl.addOverlay(lehrweg, "Naturlehrpfad");
 
 //Höhenprofil intitalisieren
 //let controlElevation = null;
@@ -65,6 +65,17 @@ const lehrpfade = new L.GPX("lehrpfad.gpx", {
 lehrweg.on("loaded", function () {
 karte.fitBounds(lehrweg.getBounds());
 });
+
+for (let lehrweg of lehrpfad) {
+    let lehrpin = L.marker(
+        [lehrweg.lat, lehrweg.lng]
+    ).addTo(lehrweg);
+    lehrpin.bindPopup(
+        `<h1>Standort ${blick.standort}</h1>
+         <p>Höhe: ${blick.seehoehe} m</p>
+         <em>Kunde: ${blick.kunde}</em>`
+    );
+}
 //Höhenprofil zeichnen das sich aktualisiert
 
 lehrweg.on("addline", function (evt) {

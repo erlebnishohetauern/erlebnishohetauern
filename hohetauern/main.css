@@ -45,12 +45,14 @@ header h3 {
   .dropdown {
     float: left;
     overflow: hidden;
-    margin-left: 90px;
+    margin-left: 20px;
     
   }
   
   /* Dropdown button */
   .dropdown .dropbtn {
+    width: 60%;
+    height: 60%;
     font-size: 16px; 
     border: none;
     outline: none;
@@ -58,7 +60,7 @@ header h3 {
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
+    margin: 90; /* Important for vertical align on mobile phones */
   }
   
   /* Add a red background color to navbar links on hover */
@@ -109,6 +111,31 @@ padding: 5px;
 font-size: 0.7em;
 }
 
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 20%;
+  padding: 5%;
+ 
+}
+
+.column p {
+  text-align: justify;
+}
+
+.column img {
+  height: 250px;
+  width: 300px;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 #map {
     height: 360px;
     width: 90%;
@@ -124,7 +151,10 @@ font-size: 0.7em;
 }
 
 footer {
-    padding: 1em 0 3em 0;
+    padding: 1em 5 3em 5;
+    text-align: right;
+    font-style: italic;
+    margin-right: 3em;
 }
 
 @media only screen and (max-width: 1300px) {

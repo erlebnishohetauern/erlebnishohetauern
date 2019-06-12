@@ -30,25 +30,27 @@ const layerControl = L.control.layers({
 
 kartenLayer.geolandbasemap.addTo(karte);
 
-karte.setView(
-    [breite, laenge],
-    10
-);
-
 //Fullscreen
 karte.addControl(new L.Control.Fullscreen());
+
+karte.setView(
+   [breite, laenge],
+   10
+);
 
 //GPX GRuppe erstellen und Menü
 let bike = L.featureGroup().addTo(karte);
 layerControl.addOverlay(bike, "Ebike");
 
+//karte.fitBounds(bike.getBounds());
+
 //Höhenprofil intitalisieren
 //let controlElevation = null;
 
-//Auf Ausschnitt zoomen
-karte.fitBounds(bike.getBounds());
-
 //GPX Track laden
+console.log(Ebike.features.geometry);
+//GPX Track laden
+bike.clearLayers();
 const biken = new L.GPX("ebike.gpx", {
     async: true,
     marker_options: {
@@ -56,12 +58,9 @@ const biken = new L.GPX("ebike.gpx", {
         endIconUrl: 'icons/pin-icon-end.png',
         shadowUrl: 'icons/pin-shadow.png',
         iconSize: [32, 37]
-    }
+    }}).on("loaded", function (e) {
+karte.fitBounds(e.target.getBounds());
 }).addTo(bike);
-
-bike.on("loaded", function () {
-    // karte.fitBounds(gpxTrack.getBounds());
-});
 
 
 
