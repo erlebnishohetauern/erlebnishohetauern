@@ -1,4 +1,4 @@
-{
+const Ebike{
     "displayFieldName": "",
     "fieldAliases": {
         "FID": "FID",
