@@ -38,29 +38,6 @@ karte.setView(
 //Fullscreen
 karte.addControl(new L.Control.Fullscreen());
 
-/* //Mit Mausklick Koordinaten anzeigen lassen
-var coords = new L.Control.Coordinates();
-coords.addTo(karte);
-karte.on('click', function (e) {
-    coords.setCoordinates(e);
-});
-
-L.geoJson()
-//Funktion hinzufügen, damit verschiedene Atrribute des Popup eingebunden werden
-.bindPopup(function (displayFieldName) {
-    //console.log("Layer:", layer);
-    return `<h4>${displayFieldName.fieldAliases}</h4>
-    Name: ${displayFieldName.fieldAliases.name_de} m <br>
-    Temperatur: ${layer.feature.properties.LT} °C <br>
-    Datum: ${date.toLocaleDateString("de-AT")}
-    ${date.toLocaleTimeString("de-AT")} <br>
-    Windgeschwindigkeit:${layer.feature.properties.WG ? layer.feature.properties.WG + ' km/h' : ' keine Daten'}
-    <hr>
-    <footer>Quelle: Land Tirol - <a href="https://data.tirol.gv.at">data.tirol.gv.at</a></footer>
-    `;
-}) //Windgeschwindigkeit mit if abfrage, wenn keine Daten vorhanden sind
-.addTo(awsTirol);
- */
 //GPX GRuppe erstellen und Menü
 let bike = L.featureGroup().addTo(karte);
 layerControl.addOverlay(bike, "Ebike");
@@ -68,10 +45,10 @@ layerControl.addOverlay(bike, "Ebike");
 //Höhenprofil intitalisieren
 //let controlElevation = null;
 
-//GPX Track laden
-console.log(Ebike.features.geometry);
+//Auf Ausschnitt zoomen
+karte.fitBounds(bike.getBounds());
 
-bike.clearLayers(); //nur einen Track anzeigen und der der vorher angezeigt wurde wird nicht mehr angezeigt
+//GPX Track laden
 const biken = new L.GPX("ebike.gpx", {
     async: true,
     marker_options: {
@@ -85,6 +62,10 @@ const biken = new L.GPX("ebike.gpx", {
 bike.on("loaded", function () {
     // karte.fitBounds(gpxTrack.getBounds());
 });
+
+
+
+
 //Höhenprofil zeichnen das sich aktualisiert
 
 bike.on("addline", function (evt) {
