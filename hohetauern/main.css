@@ -101,33 +101,33 @@ header h3 {
   }
 
 main {
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
-.Aktivitäten
-{
+.Aktivitäten {
 float: left;
-width: 300px;
+width: 200px;
 padding: 5px;
 font-size: 0.7em;
-}
+} 
 
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
   width: 20%;
-  padding: 5%;
+  padding: 6%;
  
 }
 
 .column p {
   text-align: justify;
+  width: 320px;
 }
 
 .column img {
   height: 250px;
-  width: 300px;
+  width: 320px;
   
 }
 
@@ -138,19 +138,11 @@ font-size: 0.7em;
   clear: both;
 }
 
-#map {
-    height: 360px;
-    width: 90%;
-    border: 1px solid black;
+.Anreise img {
+height: 400px;
+width: 650px;
 }
 
-.back {
-    float: left;
-}
-
-.next {
-    float: right;
-}
 
 footer {
     padding: 1em 5 3em 5;
