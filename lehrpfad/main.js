@@ -63,7 +63,7 @@ const lehrpfade = new L.GPX("lehrpfad.gpx", {
 }).addTo(lehrweg);
 
 lehrweg.on("loaded", function () {
-karte.fitBounds(gpxTrack.getBounds());
+karte.fitBounds(lehrweg.getBounds());
 });
 //Höhenprofil zeichnen das sich aktualisiert
 
