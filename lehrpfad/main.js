@@ -39,17 +39,6 @@ karte.addControl(new L.Control.Fullscreen());
 
 karte.setView([47.25, 11.416667], 9);
 
-// https://github.com/Norkart/Leaflet-MiniMap
-// new L.Control.MiniMap(
-//     L.tileLayer("https://{s}.wien.gv.at/basemap/geolandbasemap/normal/google3857/{z}/{y}/{x}.png", {
-//         subdomains: ["maps", "maps1", "maps2", "maps3", "maps4"],
-//     }), {
-//         zoomLevelOffset: -4,
-//         toggleDisplay: true,
-//         minimized: true
-//     }
-// ).addTo(karte);
-
 // die Implementierung der Karte startet hier
 
 
@@ -63,7 +52,6 @@ layerControl.addOverlay(lehrweg, "lehrpfad");
 //GPX Track laden
 console.log(lehrpfad.features.geometry);
 
-lehrweg.clearLayers(); //nur einen Track anzeigen und der der vorher angezeigt wurde wird nicht mehr angezeigt
 const lehrpfade = new L.GPX("lehrpfad.gpx", {
     async: true,
     marker_options: {
@@ -75,7 +63,7 @@ const lehrpfade = new L.GPX("lehrpfad.gpx", {
 }).addTo(lehrweg);
 
 lehrweg.on("loaded", function () {
-    // karte.fitBounds(gpxTrack.getBounds());
+karte.fitBounds(gpxTrack.getBounds());
 });
 //Höhenprofil zeichnen das sich aktualisiert
 
