@@ -37,7 +37,7 @@ karte.setView(
 
 karte.addControl(new L.Control.Fullscreen());
 
-karte.setView([47.25, 11.416667], 9);
+//karte.setView([47.25, 11.416667], 9);
 
 // die Implementierung der Karte startet hier
 
@@ -59,7 +59,7 @@ const lehrpfade = new L.GPX("lehrpfad.gpx", {
         iconSize: [32, 37]
     }}).on("loaded", function (e) {
 karte.fitBounds(e.target.getBounds());
-}).addTo(bike).bindPopup("Hallo");
+}).addTo(lehrweg).bindPopup("Hallo");
 
 
 

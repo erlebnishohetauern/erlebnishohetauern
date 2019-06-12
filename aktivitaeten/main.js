@@ -62,9 +62,8 @@ const biken = new L.GPX("ebike.gpx", {
 karte.fitBounds(e.target.getBounds());
 }).addTo(bike).bindPopup("Hallo");
 
-for (let name of Ebike) {
-   biken.on("loaded", function (e) {
-    karte.bindPopup("Test")})
+for (let name of biken) {
+   print(name)
 };
 //Höhenprofil zeichnen das sich aktualisiert
 
