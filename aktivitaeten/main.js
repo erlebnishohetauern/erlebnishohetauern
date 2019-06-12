@@ -62,9 +62,6 @@ const biken = new L.GPX("ebike.gpx", {
 karte.fitBounds(e.target.getBounds());
 }).addTo(bike);
 
-
-
-
 //Höhenprofil zeichnen das sich aktualisiert
 
 bike.on("addline", function (evt) {
