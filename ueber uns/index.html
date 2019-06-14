@@ -17,33 +17,10 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 
-    <!--Fullscreen von der Internetseite github leaflet FULLSCREEN-->
-    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
-        rel='stylesheet' />
-
-    <!--Quelle für Kartenlayer - steht unten an der Karte-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-hash/0.2.1/leaflet-hash.js"></script>
-
-    <!--Plugins: Koordinaten anzeigen lassen-->
-    <link href="plugins/Control.Coordinates.css" rel="stylesheet">
-    <script src="plugins/Control.Coordinates.js"></script>
-
-    
-    <!--Main.js und css.js einbinden-->
+    <!--css.js einbinden-->
     <link rel="stylesheet" href="main.css">
-    <script src="Ebike.js"></script>
-    <script defer src="main.js"></script>
+   
 
-    <!-- Track einbinden -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js"></script>
-
-    <!-- Vorarbeit Höhenprofil -->
-    <script src="https://unpkg.com/d3@4.13.0/build/d3.min.js" charset="utf-8"></script>
-
-    <!-- Höhenprofil einbinden -->
-    <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@latest/leaflet-elevation.css" />
-    <script src="https://unpkg.com/@raruto/leaflet-elevation@latest/leaflet-elevation.js"></script>
 
 </head>
 
@@ -65,13 +42,14 @@
                 </svg><!-- <i class="fa fa-caret-down"></i> -->
             </button>
             <div class="dropdown-content">
-                <a href="">
+                <a href="../aktivitaeten/index.html">
                     <!-- Ebike und naturlehrpfade (evtl sehnswürdigkeiten auf dem weg) -->
                     <strong>E-Bike Routen</strong>
                 </a>
                 <a href="../lehrpfad/index.html">
                     <strong>Naturlehrpfade</strong>
- 
+                </a>
+
             </div>
         </div>
         <a href="../ueber uns/index.html">
@@ -80,28 +58,32 @@
         </a>
     </div>
     <main>
-        <h1>Steile Berge? Kein Problem auf deiner E-Bike Tour!</h1>
-        <p>
-            Den Nationalpark Hohe Tauern mit dem Rad erleben? Bei uns kein Problem! Egal, ob geübte(r)
-            MountainbikerIn oder gemütliche(r) E-Bike FahrerIn, auf unseren Routen ist für jeden etwas dabei. Bei uns
-            erleben
-            Sie grenzenlose
-            Mobilität durch die perfekte Kombination aus gut erschlossenen Radwegen und einer Vielzahl von Verleih- und
-            Akkuwechselstationen.
-        </p>
-        <img src="images/EBiker.jpg" alt="Biker">
+        <h1>Über uns</h1>
+        <p>Wir sind zwei Studierende der Universität Innsbruck und haben diese Seite innerhalb des Methodenkurses "Webmapping" erstellt.</p>
+         <img src="images/Murmele.jpg" alt="Murmeltiere">
 
-        <h3>E-Bike Routen</h3>
-        
-        <div id="map" data-lat="47.12" data-lng="12.50" data-title="Nationalpark Hohe Tauern" >
+         <div class="author">
+            <img src="images/MurmelToni.jpg" alt="MurmelToni"> <br>
+            <a href="mailto: antonia.moschin@student.uibk.ac.at">Antonia Moschin</a> <br>
+            <a href="https://github.com/antoniamoschin/antoniamoschin.github.io">Github antoniamoschin</a>
         </div>
+        <br>
+        <div class="author2">
+            <img src="images/MurmelSusi.jpg" alt="MurmelSusi"> <br>
+            <a href="mailto: susanne.hentschel@student.uibk.ac.at">Susanne Hentschel</a> <br>
+            <a href="https://github.com/susannehentschel/susannehentschel.github.io">Github susannehentschel</a>
+        </div>
+        <br>
+         <p>Wir bedanken uns bei unsern Kursleitern Klaus Förster und Bernd Öggl, vor allem für ihre starken Nerven ;). </p>
+        
 
+
+
+       
     </main>
-
-    <hr />
-
+<hr>
     <footer>
-    Alle Bilder von pixabay.com
+        Alle Bilder von pixabay.com
     </footer>
 
 </body>
