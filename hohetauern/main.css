@@ -1,7 +1,7 @@
 
 
 body {
-    max-width: 100%;
+    max-width: 90%;
     margin: auto;
     font-family: "Open Sans";
     background-color: rgb(213, 231, 199);
@@ -10,18 +10,20 @@ body {
 header {
     text-align: center;
     background-image: url("images/Murmeltier.jpg");
-    background-position: 5 35%;
+    background-position: 0 20%;
 }
 
 header h2 {
     font-size: 4em;
+    font-style: italic;
     color: white;
     margin: 0;
-    padding: 2.5em 0;
+    padding: 1.5em 0;
 }
 
 header h3 {
     font-size: 2em;
+    font-style: italic;
     margin: 0;
     color: white;
 }
@@ -221,12 +223,16 @@ main {
 
 .column p {
   text-align: justify;
+  font-style: italic;
   width: 320px;
 }
 
 .column img {
   height: 250px;
   width: 320px;
+  border: 6px solid white;
+  border-radius: 50%;
+
   
 }
 
