@@ -28,7 +28,7 @@ const layerControl = L.control.layers({
     "OpenStreetMap": kartenLayer.osm,
 }).addTo(karte);
 
-kartenLayer.geolandbasemap.addTo(karte);
+kartenLayer.osm.addTo(karte);
 
 //Fullscreen
 karte.addControl(new L.Control.Fullscreen());
