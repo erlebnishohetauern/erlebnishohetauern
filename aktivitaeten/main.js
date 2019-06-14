@@ -44,9 +44,6 @@ layerControl.addOverlay(bike, "Ebike");
 
 
 
-//Höhenprofil intitalisieren
-//let controlElevation = null;
-
 //GPX Track laden
 console.log(Ebike.features.geometry);
 //GPX Track laden
@@ -57,27 +54,22 @@ const biken = new L.GPX("ebike.gpx", {
         startIconUrl: 'icons/pin-icon-start.png',
         endIconUrl: 'icons/pin-icon-end.png',
         shadowUrl: 'icons/pin-shadow.png',
-        iconSize: [32, 37]
-    }}).on("loaded", function (e) {
+        iconSize: [32, 37] 
+}}).on("loaded", function (e) {
 karte.fitBounds(e.target.getBounds());
-}).addTo(bike).bindPopup("Hallo");
+}).addTo(bike).bindPopup (function (features){
+            const biken = new L.GPX (features.attributes.NAME_DE);
+            //console.log("Datum:", date);
+            return `<h4>${features.attributes.NAME_DE}</h4>`
+        }) 
+        .addTo(bike);
 
-for (let name of biken) {
-   print(name)
-};
-//Höhenprofil zeichnen das sich aktualisiert
+//Koordinaten anzeigen
+var hash = new L.Hash(karte);
+var coords = new L.Control.Coordinates();
+coords.addTo(karte);
+karte.on('click', function(e) {
+	coords.setCoordinates(e);
+});
 
-bike.on("addline", function (evt) {
-    //damit immer nur eine Elevation angezeigt wird/ bestehendes Profil löschen
-    if (controlElevation) {
-        controlElevation.clear();
-        document.getElementById("elevation-div").innerHTML = "";
-    }
-    controlElevation = L.control.elevation({
-        theme: "steelblue-theme",
-        detachedView: true,
-        elevationDiv: "#elevation-div"
-    })
-    controlElevation.addTo(karte);
-    controlElevation.addData(evt.line);
-})
+

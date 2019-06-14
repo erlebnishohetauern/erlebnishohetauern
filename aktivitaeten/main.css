@@ -93,13 +93,7 @@ main img {
     border: 1px solid black;
 }
 
-.back {
-    float: left;
-}
 
-.next {
-    float: right;
-}
 
 footer {
   padding: 1em 5 3em 5;
