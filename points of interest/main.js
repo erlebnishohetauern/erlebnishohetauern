@@ -37,13 +37,20 @@ karte.setView(
 
 karte.addControl(new L.Control.Fullscreen());
 
+const ssehenswürdigkeit = L.featureGroup().addTo(karte);
 
-//GPX GRuppe erstellen und Menü
+//GPX Datei Einlesen
+new L.GPX(POI, { async: true }).on('loaded', function (e) {
+    karte.fitBounds(e.target.getBounds());
+}).addTo(sehenswürdigkeit);
+
+
+/* GPX GRuppe erstellen und Menü
 let point = L.featureGroup().addTo(karte);
 layerControl.addOverlay(lehrweg, "Naturlehrpfad");
 
 
-//GPX Track laden
+GPX Track laden
 console.log(POI.features.geometry);
 
 for (let point of POI) {
@@ -64,4 +71,4 @@ new L.GPX("poi.gpx", {
     }
 }).on('loaded', function (e) {
     karte.fitBounds(e.target.getBounds())
-});
+}); */
