@@ -22,67 +22,82 @@
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
         rel='stylesheet' />
 
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js"></script>
-    
-        <!--Quelle für Kartenlayer - steht unten an der Karte-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js"></script>
+
+    <!--Quelle für Kartenlayer - steht unten an der Karte-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-hash/0.2.1/leaflet-hash.js"></script>
 
     <!--Plugins: Koordinaten anzeigen lassen-->
     <link href="plugins/Control.Coordinates.css" rel="stylesheet">
     <script src="plugins/Control.Coordinates.js"></script>
 
-  <script src="poi.js"></script>
-  <script src="poi.gpx"></script>
+    <script src="poi.js"></script>
+    <script src="poi.gpx"></script>
 
     <!--Main.js und css.js einbinden-->
     <link rel="stylesheet" href="main.css">
-   
+
     <script defer src="main.js"></script>
 
     <!-- Track einbinden -->
     <!--<script src="https://gis.tirol.gv.at/ogd/sport_freizeit/NPHT/nphtt_lehrwege_wgs84_geojson_aug16.zip"></script>-->
 
 
-    
+
 </head>
 
 <body>
 
     <div id='cssmenu'>
         <ul>
-           <li><a href='../hohetauern/index.html'><span>Home</span></a></li>
-           <li class='active has-sub'><a href='#'><span>Aktivitäten</span></a>
-              <ul>
-                 <li class='has-sub'><a href='../aktivitaeten/index.html'><span>E-Bike Routen</span></a>
-                 </li>
-                 <li class='has-sub'><a href='../lehrpfad/index.html'><span>Lehrpfade</span></a>
-                 </li>
-                 <li class='has-sub'><a href='../points of interest/index.html'><span>Point of Interests</span></a>
-                 </li>
-              </ul>
-           </li>
-           <li><a href='../ueber uns/index.html'><span>Über uns</span></a></li>
-        
+            <li><a href='../hohetauern/index.html'><span>Home</span></a></li>
+            <li class='active has-sub'><a href='#'><span>Aktivitäten</span></a>
+                <ul>
+                    <li class='has-sub'><a href='../aktivitaeten/index.html'><span>E-Bike Routen</span></a>
+                    </li>
+                    <li class='has-sub'><a href='../lehrpfad/index.html'><span>Lehrpfade</span></a>
+                    </li>
+                    <li class='has-sub'><a href='../points of interest/index.html'><span>Point of Interests</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href='../ueber uns/index.html'><span>Über uns</span></a></li>
+
         </ul>
-        </div>
+    </div>
 
     <main>
-        <h1>Lerne mehr über deine Umwelt</h1>
-        <p>
-            Die Themenwege im Nationalpark Hohe Tauern laden zum selbstständigen Entdecken der Natur- und Kulturschätze
-            dieser einzigartigen Landschaft ein. Entlang der Wege finden Sie an verschiedenen Stationen Informationen
-            vor Ort. (Quelle:
-            <a href="https://hohetauern.at/de/besuchen/themenwege.html">hohetauern.at</a>)
-        </p>
-        <img src="images/Naturlehrpfad.jpg" alt="woman hiking"> <br>
-        
+        <h1>Erleben und staunen Sie im Nationalpark Hohe Tauern</h1>
 
-        <h3>Naturlehrpfade</h3>
- 
-        
+        <div class="row">
+            <div class="column">
+                <img src="../points of interest/images/Ködnitztal.jpg" alt="Ködnitztal" />
+                <p>Die Hohen Tauern sind das Dach Österreichs. Aus einem sagenhaften Meer von hohen Gipfeln ragt mit
+                    seinen 3.798 m der Großglockner, der höchste Berg Österreichs, in den Himmel. Im Ködnitztal ist er
+                    zum Greifen nahe. Direkt am Gipfelaufbau lassen sich mächtige Steinböcke, Murmeltiere und Steinadler
+                    leicht beobachten und mit etwas Glück auch fotografieren.</p>
+            </div>
+            <div class="column">
+                <img src="../points of interest/images/Krimmler Wasserfälle.jpg" alt="Krimmler Wasserfälle" />
+                <p>Die Krimmler Wasserfälle sind mit einer gesamten Fallhöhe von 385 m die höchsten Wasserfälle
+                    Österreichs und befinden sich am Rand des Ortes Krimml. Gebildet werden
+                    sie durch die Krimmler Ache, die am Ende des hoch gelegenen Krimmler Achentals in drei Fallstufen
+                    hinunterstürzt.</p>
+            </div>
+            <div class="column">
+                <img src="../points of interest/images/Hochalpenstraße.jpg" alt="Hochalpenstraße" />
+                <p>Die Kalser Glocknerstraße ist eine der schönsten Möglichkeiten, um sich dem Glockner anzunähern und
+                    ihn aus nächster Nähe zu bestaunen. Im Ortsteil Kals/Burg zweigt diese eindrucksvolle
+                    Hochgebirgsstraße in das Ködnitztal ab. Dann geht es bis hin zum Lucknerhaus. Dort kann man sowohl
+                    parken als sich auch noch einmal kurz stärken, bei einer kurzen Einkehr ins besagte „Lucknerhaus“.
+                </p>
+               
+            </div>
+            </div>
 
-        <div id="map" data-lat="47.12" data-lng="12.50" data-title="Nationalpark Hohe Tauern">
-        </div>
+
+            <div id="map" data-lat="47.12" data-lng="12.50" data-title="Nationalpark Hohe Tauern">
+            </div>
 
 
 

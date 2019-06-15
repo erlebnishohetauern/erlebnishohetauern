@@ -185,13 +185,40 @@ body {
 }
 
 main {
-    width: 70%;
+    width: 90%;
     margin: auto;
 }
 
-main img {
-    width: 65%;
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 20%;
+  padding: 6%;
+ 
 }
+
+.column p {
+  text-align: justify;
+  font-style: italic;
+  width: 320px;
+}
+
+.column img {
+  height: 250px;
+  width: 320px;
+  border: 6px solid white;
+  border-radius: 50%;
+
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 
 #map {
     height: 360px;
