@@ -222,6 +222,7 @@ main {
 }
 
 .column p {
+  float: left;
   text-align: justify;
   font-style: italic;
   width: 320px;
@@ -256,9 +257,9 @@ footer {
     margin-right: 3em;
 }
 
-@media only screen and (max-width: 1300px) {
-    main figure figcaption {
-        float: none;
+@media only screen and (max-width: 90%) {
+    main .column  {
+        float: left;
         margin-left: 0;
         width: auto;
     }
