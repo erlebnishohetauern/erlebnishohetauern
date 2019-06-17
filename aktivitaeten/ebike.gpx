@@ -2,6 +2,7 @@
 <gpx version="1.1" creator="GDAL 2.2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
 <metadata><bounds minlat="46.829088699203602" minlon="12.132574214641894" maxlat="47.027769913307040" maxlon="12.829412554838573"/></metadata>                  
 <trk>
+<name>E-Biking Bodenalm</name>
   <extensions>
     <ogr:FID>0</ogr:FID>
     <ogr:OBJECTID_1>961.0</ogr:OBJECTID_1>
@@ -723,6 +724,7 @@
   </trkseg>
 </trk>
 <trk>
+<name>Bike Nussdorfer Brücke - Lienzer Hütte</name>
   <extensions>
     <ogr:FID>1</ogr:FID>
     <ogr:OBJECTID_1>1608.0</ogr:OBJECTID_1>
@@ -1118,6 +1120,7 @@
   </trkseg>
 </trk>
 <trk>
+<name>E-Biking Klammljoch</name>
   <extensions>
     <ogr:FID>2</ogr:FID>
     <ogr:OBJECTID_1>1601.0</ogr:OBJECTID_1>
@@ -4115,6 +4118,7 @@
   </trkseg>
 </trk>
 <trk>
+<name> E-Biking Matrei-Zedlach/ Matrei - Virgen </name>
   <extensions>
     <ogr:FID>3</ogr:FID>
     <ogr:OBJECTID_1>1603.0</ogr:OBJECTID_1>
@@ -5956,6 +5960,7 @@
   </trkseg>
 </trk>
 <trk>
+<name>E-Biking Zedlach Strumkopf</name>
   <extensions>
     <ogr:FID>4</ogr:FID>
     <ogr:OBJECTID_1>1604.0</ogr:OBJECTID_1>
@@ -6307,6 +6312,7 @@
   </trkseg>
 </trk>
 <trk>
+<name>E-Biking Kals Ortsplatz - Luknerhaus</name>
   <extensions>
     <ogr:FID>5</ogr:FID>
     <ogr:OBJECTID_1>1605.0</ogr:OBJECTID_1>
@@ -7004,6 +7010,7 @@
   </trkseg>
 </trk>
 <trk>
+<name> Lienz - Nussdorferbrücke - Faschingalm </name>
   <extensions>
     <ogr:FID>6</ogr:FID>
     <ogr:OBJECTID_1>1606.0</ogr:OBJECTID_1>
@@ -10849,6 +10856,7 @@
   </trkseg>
 </trk>
 <trk>
+<name> E-Biking Lienz - Matrei </name>
   <extensions>
     <ogr:FID>7</ogr:FID>
     <ogr:OBJECTID_1>1607.0</ogr:OBJECTID_1>

@@ -2,6 +2,7 @@
 <gpx version="1.1" creator="GDAL 2.2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
 <metadata><bounds minlat="46.909034341540590" minlon="12.214113736468404" maxlat="47.124724686708824" maxlon="12.775544440630956"/></metadata>                  
 <trk>
+<name>Alpenblumenweg Oberseite (langer Rundweg)</name>
   <extensions>
     <ogr:FID>0</ogr:FID>
     <ogr:OBJECTID>34</ogr:OBJECTID>
@@ -2142,6 +2143,7 @@
   </trkseg>
 </trk>
 <trk>
+<name>Im Reich des Apollo</name>
   <extensions>
     <ogr:FID>1</ogr:FID>
     <ogr:OBJECTID>78</ogr:OBJECTID>
@@ -2940,6 +2942,7 @@
   </trkseg>
 </trk>
 <trk>
+<name>Geschichte(n)weg Dorfertal</name>
   <extensions>
     <ogr:FID>2</ogr:FID>
     <ogr:OBJECTID>179</ogr:OBJECTID>
@@ -4614,6 +4617,7 @@
   </trkseg>
 </trk>
 <trk>
+<name>Kinderlehrweg Kals</name>
   <extensions>
     <ogr:FID>3</ogr:FID>
     <ogr:OBJECTID>180</ogr:OBJECTID>
@@ -5044,6 +5048,7 @@
   </trkseg>
 </trk>
 <trk>
+<name> Waldlehrpfad Zedlacher Paradies </name> 
   <extensions>
     <ogr:FID>4</ogr:FID>
     <ogr:OBJECTID>181</ogr:OBJECTID>
@@ -5306,6 +5311,7 @@
   </trkseg>
 </trk>
 <trk>
+<name> Glocknerspur - BergeDenken </name> 
   <extensions>
     <ogr:FID>5</ogr:FID>
     <ogr:OBJECTID>229</ogr:OBJECTID>
@@ -5676,6 +5682,7 @@
   </trkseg>
 </trk>
 <trk>
+<name> Weg der Sinne </name> 
   <extensions>
     <ogr:FID>6</ogr:FID>
     <ogr:OBJECTID>37</ogr:OBJECTID>
@@ -6058,6 +6065,7 @@
   </trkseg>
 </trk>
 <trk>
+<name> Wasserschaupfad Umbalfälle </name> 
   <extensions>
     <ogr:FID>7</ogr:FID>
     <ogr:OBJECTID>38</ogr:OBJECTID>
@@ -6832,6 +6840,7 @@
   </trkseg>
 </trk>
 <trk>
+<name> Natur- und Kulturlehrweg Oberhauser Zirbenwald </name> 
   <extensions>
     <ogr:FID>8</ogr:FID>
     <ogr:OBJECTID>226</ogr:OBJECTID>
@@ -7090,6 +7099,7 @@
   </trkseg>
 </trk>
 <trk>
+<name> Alpenblumenweg Oberseite (kurzer Rundweg) </name> 
   <extensions>
     <ogr:FID>9</ogr:FID>
     <ogr:OBJECTID>33</ogr:OBJECTID>
@@ -8580,6 +8590,7 @@
   </trkseg>
 </trk>
 <trk>
+<name> Wassererlebnisweg St.Jakob (kleine Runde) </name> 
   <extensions>
     <ogr:FID>10</ogr:FID>
     <ogr:OBJECTID>228</ogr:OBJECTID>
@@ -8806,6 +8817,7 @@
   </trkseg>
 </trk>
 <trk>
+<name>Wasserlehrweg St. Jakob </name> 
   <extensions>
     <ogr:FID>11</ogr:FID>
     <ogr:OBJECTID>176</ogr:OBJECTID>
@@ -9442,6 +9454,7 @@
   </trkseg>
 </trk>
 <trk>
+<name>Gletscherlehrweg Innergschlöss</name> 
   <extensions>
     <ogr:FID>12</ogr:FID>
     <ogr:OBJECTID>225</ogr:OBJECTID>
@@ -11674,6 +11687,7 @@
   </trkseg>
 </trk>
 <trk>
+<name>Natur- und Kulturlehrweg Debanttal</name> 
   <extensions>
     <ogr:FID>13</ogr:FID>
     <ogr:OBJECTID>39</ogr:OBJECTID>
@@ -13306,6 +13320,7 @@
   </trkseg>
 </trk>
 <trk>
+<name>Glorerhütte Geolehrpfad</name> 
   <extensions>
     <ogr:FID>14</ogr:FID>
     <ogr:OBJECTID>166</ogr:OBJECTID>

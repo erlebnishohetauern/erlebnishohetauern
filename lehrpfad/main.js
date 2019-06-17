@@ -59,7 +59,11 @@ const lehrpfade = new L.GPX("lehrpfad.gpx", {
         iconSize: [32, 37]
     }}).on("loaded", function (e) {
 karte.fitBounds(e.target.getBounds());
-}).addTo(lehrweg).bindPopup("Hallo");
+console.log("name",e.target.get_name())
+e.target.bindPopup(`${e.target.get_name()}`)
+}).addTo(lehrweg).bindPopup("");
+
+//biken.on("addline", function(e) {
 
 
 
