@@ -56,11 +56,14 @@ const biken = new L.GPX("ebike.gpx", {
 karte.fitBounds(e.target.getBounds())
 }).addTo(bike);
 
- biken.on("addline", function(e) {
-         console.log("name",e.target.get_name())
-         e.target.bindPopup(`${e.target.get_name()}`)
- }); 
 
+ biken.on("addline", function(e) {
+    if (e.element.querySelector("name")) {
+        // wenn es ein <name> Element gibt ...
+        let track_name = e.element.querySelector("name").innerHTML;
+        e.line.bindPopup(`${track_name}`)
+    }
+});
 
 
 
