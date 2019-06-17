@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  max-width: 100%;
-  margin: 0;
+  max-width: 90%;
+  margin: auto;
   font-family: "Open Sans";
   background-color: whitesmoke;
 }
@@ -193,13 +193,16 @@ main {
 .column {
   float: left;
   width: 20%;
-  padding: 6%;
+  padding: 0px;
+  margin-left: 100px;
+  align-content: center;
  
 }
 
 .column p {
   text-align: justify;
   font-style: italic;
+  float: left; 
   width: 320px;
 }
 
@@ -241,8 +244,8 @@ footer {
   margin-right: 3em;
 }
 
-@media only screen and (max-width: 100%) {
-    main figure figcaption {
+@media only screen and (max-width: 90%) {
+    main .column {
         float: none;
         margin-left: 0;
         width: auto;

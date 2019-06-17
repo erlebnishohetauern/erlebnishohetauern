@@ -45,8 +45,6 @@ layerControl.addOverlay(bike, "Ebike");
 
 
 //GPX Track laden
-console.log(Ebike.features.geometry);
-//GPX Track laden
 bike.clearLayers();
 const biken = new L.GPX("ebike.gpx", {
     async: true,
@@ -56,13 +54,18 @@ const biken = new L.GPX("ebike.gpx", {
         shadowUrl: 'icons/pin-shadow.png',
         iconSize: [32, 37] 
 }}).on("loaded", function (e) {
-karte.fitBounds(e.target.getBounds());
-}).addTo(bike).bindPopup (function (features){
-            const biken = new L.GPX (features.attributes.NAME_DE);
-            //console.log("Datum:", date);
-            return `<h4>${features.attributes.NAME_DE}</h4>`
-        }) 
-        .addTo(bike);
+karte.fitBounds(e.target.getBounds())
+e.target.get_name();
+}).addTo(bike);
+
+
+// biken.bindPopup (function (features){
+//             console.log(features.get_name());
+//             console.log(biken);
+//             //console.log("Datum:", date);
+//             return `<h4>${features.attributes.NAME_DE}</h4>`
+//         }) 
+//         .addTo(bike);
 
 //Koordinaten anzeigen
 var hash = new L.Hash(karte);

@@ -217,8 +217,9 @@ main {
 .column {
   float: left;
   width: 20%;
-  padding: 6%;
- 
+  padding: 0%;
+  margin-left: 100px;
+  align-content: center;
 }
 
 .column p {
@@ -226,6 +227,7 @@ main {
   text-align: justify;
   font-style: italic;
   width: 320px;
+ 
 }
 
 .column img {
@@ -233,6 +235,7 @@ main {
   width: 320px;
   border: 6px solid white;
   border-radius: 50%;
+ 
 
   
 }
