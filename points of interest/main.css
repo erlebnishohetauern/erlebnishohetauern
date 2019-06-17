@@ -1,8 +1,4 @@
-    
-/*Body gesamt*/
-* {
-  box-sizing: border-box;
-}
+
 body {
   max-width: 90%;
   margin: auto;
@@ -185,15 +181,20 @@ body {
 }
 
 main {
-    width: 90%;
+    width: 80%;
     margin: auto;
+}
+
+.row {
+  font-weight: 600;
+  height: 5px;
 }
 
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
   width: 20%;
-  padding: 0px;
+  padding: 0%;
   margin-left: 100px;
   align-content: center;
  
