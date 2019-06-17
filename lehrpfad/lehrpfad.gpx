@@ -2,7 +2,7 @@
 <gpx version="1.1" creator="GDAL 2.2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
 <metadata><bounds minlat="46.909034341540590" minlon="12.214113736468404" maxlat="47.124724686708824" maxlon="12.775544440630956"/></metadata>                  
 <trk>
-<name>Alpenblumenweg Oberseite (langer Rundweg)</name>
+
   <extensions>
     <ogr:FID>0</ogr:FID>
     <ogr:OBJECTID>34</ogr:OBJECTID>
@@ -22,6 +22,7 @@
     <ogr:GEHZEIT>0.0</ogr:GEHZEIT>
   </extensions>
   <trkseg>
+  <name>Alpenblumenweg Oberseite (langer Rundweg)</name>
     <trkpt lat="46.920135169810337" lon="12.29974813147097">
     </trkpt>
     <trkpt lat="46.920157120907618" lon="12.299642164042297">
@@ -2143,7 +2144,7 @@
   </trkseg>
 </trk>
 <trk>
-<name>Im Reich des Apollo</name>
+
   <extensions>
     <ogr:FID>1</ogr:FID>
     <ogr:OBJECTID>78</ogr:OBJECTID>
@@ -2163,6 +2164,7 @@
     <ogr:GEHZEIT>0.0</ogr:GEHZEIT>
   </extensions>
   <trkseg>
+  <name>Im Reich des Apollo</name>
     <trkpt lat="46.932616635077927" lon="12.549307058709864">
     </trkpt>
     <trkpt lat="46.932657891272157" lon="12.549156517834927">
@@ -2942,7 +2944,7 @@
   </trkseg>
 </trk>
 <trk>
-<name>Geschichte(n)weg Dorfertal</name>
+
   <extensions>
     <ogr:FID>2</ogr:FID>
     <ogr:OBJECTID>179</ogr:OBJECTID>
@@ -2962,6 +2964,7 @@
     <ogr:GEHZEIT>2.0</ogr:GEHZEIT>
   </extensions>
   <trkseg>
+  <name>Geschichte(n)weg Dorfertal</name>
     <trkpt lat="47.025676475812077" lon="12.631143714573055">
     </trkpt>
     <trkpt lat="47.025706962673482" lon="12.631064036022005">
@@ -4617,7 +4620,7 @@
   </trkseg>
 </trk>
 <trk>
-<name>Kinderlehrweg Kals</name>
+
   <extensions>
     <ogr:FID>3</ogr:FID>
     <ogr:OBJECTID>180</ogr:OBJECTID>
@@ -4637,6 +4640,7 @@
     <ogr:GEHZEIT>3.0</ogr:GEHZEIT>
   </extensions>
   <trkseg>
+  <name>Kinderlehrweg Kals</name>
     <trkpt lat="47.010540417329523" lon="12.640008229879356">
     </trkpt>
     <trkpt lat="47.010595350989384" lon="12.639975101505103">
@@ -5048,7 +5052,7 @@
   </trkseg>
 </trk>
 <trk>
-<name> Waldlehrpfad Zedlacher Paradies </name> 
+ 
   <extensions>
     <ogr:FID>4</ogr:FID>
     <ogr:OBJECTID>181</ogr:OBJECTID>
@@ -5068,6 +5072,7 @@
     <ogr:GEHZEIT>2.5</ogr:GEHZEIT>
   </extensions>
   <trkseg>
+  <name> Waldlehrpfad Zedlacher Paradies </name>
     <trkpt lat="47.004586034871544" lon="12.499319582942274">
     </trkpt>
     <trkpt lat="47.004639641589954" lon="12.500281541394653">
@@ -5311,7 +5316,7 @@
   </trkseg>
 </trk>
 <trk>
-<name> Glocknerspur - BergeDenken </name> 
+
   <extensions>
     <ogr:FID>5</ogr:FID>
     <ogr:OBJECTID>229</ogr:OBJECTID>
@@ -5331,6 +5336,7 @@
     <ogr:GEHZEIT>1.5</ogr:GEHZEIT>
   </extensions>
   <trkseg>
+  <name> Glocknerspur - BergeDenken </name> 
     <trkpt lat="47.0213168296793" lon="12.688882458307562">
     </trkpt>
     <trkpt lat="47.021393576934472" lon="12.688911934783633">
@@ -5682,7 +5688,7 @@
   </trkseg>
 </trk>
 <trk>
-<name> Weg der Sinne </name> 
+ 
   <extensions>
     <ogr:FID>6</ogr:FID>
     <ogr:OBJECTID>37</ogr:OBJECTID>
@@ -5702,6 +5708,7 @@
     <ogr:GEHZEIT>0.0</ogr:GEHZEIT>
   </extensions>
   <trkseg>
+  <name> Weg der Sinne </name>
     <trkpt lat="47.003088219940054" lon="12.457374531073011">
     </trkpt>
     <trkpt lat="47.002954190569909" lon="12.457543179234886">
@@ -6065,7 +6072,7 @@
   </trkseg>
 </trk>
 <trk>
-<name> Wasserschaupfad Umbalfälle </name> 
+ 
   <extensions>
     <ogr:FID>7</ogr:FID>
     <ogr:OBJECTID>38</ogr:OBJECTID>
@@ -6085,6 +6092,7 @@
     <ogr:GEHZEIT>2.5</ogr:GEHZEIT>
   </extensions>
   <trkseg>
+  <name> Wasserschaupfad Umbalfälle </name>
     <trkpt lat="47.016755787591151" lon="12.318116599548699">
     </trkpt>
     <trkpt lat="47.016194876556895" lon="12.317796026807271">
@@ -6840,7 +6848,7 @@
   </trkseg>
 </trk>
 <trk>
-<name> Natur- und Kulturlehrweg Oberhauser Zirbenwald </name> 
+
   <extensions>
     <ogr:FID>8</ogr:FID>
     <ogr:OBJECTID>226</ogr:OBJECTID>
@@ -6860,6 +6868,7 @@
     <ogr:GEHZEIT>1.5</ogr:GEHZEIT>
   </extensions>
   <trkseg>
+  <name> Natur- und Kulturlehrweg Oberhauser Zirbenwald </name> 
     <trkpt lat="46.944431145850018" lon="12.21969637253091">
     </trkpt>
     <trkpt lat="46.944525415907535" lon="12.219645390539501">
@@ -7099,7 +7108,7 @@
   </trkseg>
 </trk>
 <trk>
-<name> Alpenblumenweg Oberseite (kurzer Rundweg) </name> 
+
   <extensions>
     <ogr:FID>9</ogr:FID>
     <ogr:OBJECTID>33</ogr:OBJECTID>
@@ -7119,6 +7128,7 @@
     <ogr:GEHZEIT>4.0</ogr:GEHZEIT>
   </extensions>
   <trkseg>
+  <name> Alpenblumenweg Oberseite (kurzer Rundweg) </name> 
     <trkpt lat="46.920135169810337" lon="12.29974813147097">
     </trkpt>
     <trkpt lat="46.920157120907618" lon="12.299642164042297">
@@ -8590,7 +8600,7 @@
   </trkseg>
 </trk>
 <trk>
-<name> Wassererlebnisweg St.Jakob (kleine Runde) </name> 
+
   <extensions>
     <ogr:FID>10</ogr:FID>
     <ogr:OBJECTID>228</ogr:OBJECTID>
@@ -8610,6 +8620,7 @@
     <ogr:GEHZEIT>1.0</ogr:GEHZEIT>
   </extensions>
   <trkseg>
+  <name> Wassererlebnisweg St.Jakob (kleine Runde) </name> 
     <trkpt lat="46.915238700130857" lon="12.335890798690636">
     </trkpt>
     <trkpt lat="46.915028741678491" lon="12.335817859194941">
@@ -8817,7 +8828,7 @@
   </trkseg>
 </trk>
 <trk>
-<name>Wasserlehrweg St. Jakob </name> 
+
   <extensions>
     <ogr:FID>11</ogr:FID>
     <ogr:OBJECTID>176</ogr:OBJECTID>
@@ -8837,6 +8848,7 @@
     <ogr:GEHZEIT>0.0</ogr:GEHZEIT>
   </extensions>
   <trkseg>
+  <name>Wasserlehrweg St. Jakob </name> 
     <trkpt lat="46.915238700130857" lon="12.335890798690636">
     </trkpt>
     <trkpt lat="46.915028741678491" lon="12.335817859194941">
@@ -9454,7 +9466,7 @@
   </trkseg>
 </trk>
 <trk>
-<name>Gletscherlehrweg Innergschlöss</name> 
+
   <extensions>
     <ogr:FID>12</ogr:FID>
     <ogr:OBJECTID>225</ogr:OBJECTID>
@@ -9474,6 +9486,7 @@
     <ogr:GEHZEIT>5.0</ogr:GEHZEIT>
   </extensions>
   <trkseg>
+  <name>Gletscherlehrweg Innergschlöss</name> 
     <trkpt lat="47.124239518283424" lon="12.45181487769843">
     </trkpt>
     <trkpt lat="47.124146014649426" lon="12.451178286538076">
@@ -11687,7 +11700,7 @@
   </trkseg>
 </trk>
 <trk>
-<name>Natur- und Kulturlehrweg Debanttal</name> 
+ 
   <extensions>
     <ogr:FID>13</ogr:FID>
     <ogr:OBJECTID>39</ogr:OBJECTID>
@@ -11707,6 +11720,7 @@
     <ogr:GEHZEIT>3.0</ogr:GEHZEIT>
   </extensions>
   <trkseg>
+  <name>Natur- und Kulturlehrweg Debanttal</name>
     <trkpt lat="46.915472533713555" lon="12.775544440630956">
     </trkpt>
     <trkpt lat="46.915612254474055" lon="12.775263528182924">
@@ -13320,7 +13334,7 @@
   </trkseg>
 </trk>
 <trk>
-<name>Glorerhütte Geolehrpfad</name> 
+ 
   <extensions>
     <ogr:FID>14</ogr:FID>
     <ogr:OBJECTID>166</ogr:OBJECTID>
@@ -13340,6 +13354,7 @@
     <ogr:GEHZEIT>0.0</ogr:GEHZEIT>
   </extensions>
   <trkseg>
+  <name>Glorerhütte Geolehrpfad</name>
     <trkpt lat="47.021720591459136" lon="12.689156889310885">
     </trkpt>
     <trkpt lat="47.021700045401538" lon="12.689149193262878">

@@ -47,8 +47,6 @@ let lehrweg = L.featureGroup().addTo(karte);
 layerControl.addOverlay(lehrweg, "Naturlehrpfad");
 
 
-//GPX Track laden
-console.log(lehrpfad.features.geometry);
 
 const lehrpfade = new L.GPX("lehrpfad.gpx", {
     async: true,
@@ -58,10 +56,17 @@ const lehrpfade = new L.GPX("lehrpfad.gpx", {
         shadowUrl: 'icons/pin-shadow.png',
         iconSize: [32, 37]
     }}).on("loaded", function (e) {
-karte.fitBounds(e.target.getBounds());
-console.log("name",e.target.get_name())
-e.target.bindPopup(`${e.target.get_name()}`)
-}).addTo(lehrweg).bindPopup("");
+        console.log (e.target.get_name())
+    karte.fitBounds(e.target.getBounds())
+}).addTo(lehrweg);
+
+lehrpfade.on("addline", function(e) {
+    if (e.element.querySelector("name")) {
+        // wenn es ein <name> Element gibt ...
+        let track_name = e.element.querySelector("name").innerHTML;
+        e.line.bindPopup(`${track_name}`)
+    }
+});
 
 //biken.on("addline", function(e) {
 
