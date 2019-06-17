@@ -55,14 +55,12 @@ const biken = new L.GPX("ebike.gpx", {
         iconSize: [32, 37] 
 }}).on("loaded", function (e) {
     console.log (e.target.get_name())
-e.target.bindPopup(`${e.target.get_name()}`)
 karte.fitBounds(e.target.getBounds())
 }).addTo(bike);
 
-
  biken.on("addline", function(e) {
-console.log("name",e.target.get_name()) 
-
+         console.log("name",e.target.get_name())
+         e.target.bindPopup(`${e.target.get_name()}`)
  }); 
 
 
