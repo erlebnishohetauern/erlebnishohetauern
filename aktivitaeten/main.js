@@ -42,8 +42,6 @@ karte.setView(
 let bike = L.featureGroup().addTo(karte);
 layerControl.addOverlay(bike, "Ebike");
 
-
-
 //GPX Track laden
 bike.clearLayers();
 const biken = new L.GPX("ebike.gpx", {
