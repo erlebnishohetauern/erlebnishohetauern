@@ -54,9 +54,12 @@ const biken = new L.GPX("ebike.gpx", {
         shadowUrl: 'icons/pin-shadow.png',
         iconSize: [32, 37] 
 }}).on("loaded", function (e) {
+    console.log (e.target.get_name())
 karte.fitBounds(e.target.getBounds())
 e.target.get_name();
 }).addTo(bike);
+
+console.log ("test", biken.get_name()); 
 
 
 // biken.bindPopup (function (features){

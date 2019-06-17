@@ -216,7 +216,7 @@ main {
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 40%;
+  width: 30%;
   padding: 0px;
   margin-left: 90px;
   margin-right: 90px; 
@@ -224,16 +224,14 @@ main {
 }
 
 .column p {
-  float: left;
   text-align: justify;
   font-style: italic;
-  width: 320px;
  
 }
 
 .column img {
-  height: 250px;
-  width: 320px;
+  height: 250px; 
+  width: 300px;
   border: 6px solid white;
   border-radius: 50%;
 } 
