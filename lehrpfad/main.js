@@ -69,7 +69,6 @@ lehrpfade.on("addline", function (e) {
     }
 });
 
-<<<<<<< HEAD
 //Koordinaten anzeigen
 var hash = new L.Hash(karte);
 var coords = new L.Control.Coordinates();
@@ -80,7 +79,3 @@ karte.on('click', function(e) {
 
 
 
-
-=======
-//biken.on("addline", function(e) {
->>>>>>> 0152175003ab4ffa41c980956a72a4a87a9c9fb4
