@@ -37,38 +37,40 @@ karte.setView(
 
 karte.addControl(new L.Control.Fullscreen());
 
-const ssehenswürdigkeit = L.featureGroup().addTo(karte);
+//GPX GRuppe erstellen und Menü
+let sehenswürdigkeiten = L.featureGroup().addTo(karte);
+layerControl.addOverlay(sehenswürdigkeiten, "Points of Interest");
 
-//GPX Datei Einlesen
-new L.GPX(POI, { async: true }).on('loaded', function (e) {
-    karte.fitBounds(e.target.getBounds());
-}).addTo(sehenswürdigkeit);
-
-
-/* GPX GRuppe erstellen und Menü
-let point = L.featureGroup().addTo(karte);
-layerControl.addOverlay(lehrweg, "Naturlehrpfad");
-
-
-GPX Track laden
-console.log(POI.features.geometry);
-
-for (let point of POI) {
-    console.log(point);
-    let pin = L.marker(
-        [point.lat, point.lng]
-    ).addTo(point);
-    pin.bindPopup(
-        `<h1>Standort ${features.properties.NAME}</h1>
-         `
-    );
-}
-
-new L.GPX("poi.gpx", {
+//GPX Track laden
+sehenswürdigkeiten.clearLayers();
+const poi = new L.GPX("poi.gpx", {
     async: true,
     marker_options: {
-        startIconUrl: 'images/pin-icon-start.png',
-    }
-}).on('loaded', function (e) {
+        IconUrl: 'icons/pin-icon-start.png',
+        IconUrl: 'icons/pin-icon-end.png',
+        shadowUrl: 'icons/pin-shadow.png',
+        iconSize: [32, 37] 
+}}).on("loaded", function (e) {
     karte.fitBounds(e.target.getBounds())
-}); */
+    console.log ("name",e.target.get_name())
+    e.target.bindPopup(`${e.target.get_name()}`)
+}).addTo(sehenswürdigkeiten).bindPopup("");
+
+
+ poi.on("addline", function(e) {
+    if (e.element.querySelector("name")) {
+        // wenn es ein <name> Element gibt ...
+        let track_name = e.element.querySelector("name").innerHTML;
+        e.line.bindPopup(`${track_name}`)
+    }
+});
+
+//Koordinaten anzeigen
+var hash = new L.Hash(karte);
+var coords = new L.Control.Coordinates();
+coords.addTo(karte);
+karte.on('click', function(e) {
+	coords.setCoordinates(e);
+});
+
+

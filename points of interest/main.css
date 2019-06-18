@@ -3,7 +3,7 @@ body {
   max-width: 90%;
   margin: auto;
   font-family: "Open Sans";
-  background-color: whitesmoke;
+  background-color: rgb(213, 231, 199);
 }
 
 #cssmenu ul,
@@ -193,9 +193,10 @@ main {
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 20%;
+  width: 30%;
   padding: 0%;
-  margin-left: 100px;
+  margin-left: 90px;
+  margin-right: 90px;
   align-content: center;
  
 }
@@ -203,8 +204,7 @@ main {
 .column p {
   text-align: justify;
   font-style: italic;
-  float: left; 
-  width: 320px;
+  
 }
 
 .column img {
@@ -230,13 +230,7 @@ main {
     border: 1px solid black;
 }
 
-.back {
-    float: left;
-}
 
-.next {
-    float: right;
-}
 
 footer {
   padding: 1em 5 3em 5;
@@ -247,7 +241,7 @@ footer {
 
 @media only screen and (max-width: 90%) {
     main .column {
-        float: none;
+        float: left;
         margin-left: 0;
         width: auto;
     }

@@ -68,7 +68,13 @@ lehrpfade.on("addline", function(e) {
     }
 });
 
-//biken.on("addline", function(e) {
+//Koordinaten anzeigen
+var hash = new L.Hash(karte);
+var coords = new L.Control.Coordinates();
+coords.addTo(karte);
+karte.on('click', function(e) {
+	coords.setCoordinates(e);
+});
 
 
 
