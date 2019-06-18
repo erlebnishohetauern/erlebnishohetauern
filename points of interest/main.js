@@ -41,14 +41,14 @@ karte.addControl(new L.Control.Fullscreen());
 let sehenswürdigkeiten = L.featureGroup().addTo(karte);
 layerControl.addOverlay(sehenswürdigkeiten, "Points of Interest");
 
+
+
 //GPX Track laden
 sehenswürdigkeiten.clearLayers();
 const poi = new L.GPX("poi.gpx", {
     async: true,
     marker_options: {
-        IconUrl: 'icons/pin-icon-start.png',
-        IconUrl: 'icons/pin-icon-end.png',
-        shadowUrl: 'icons/pin-shadow.png',
+        IconUrl: 'icons/icon-see',
         iconSize: [32, 37] 
 }}).on("loaded", function (e) {
     karte.fitBounds(e.target.getBounds())
@@ -64,6 +64,12 @@ const poi = new L.GPX("poi.gpx", {
         e.line.bindPopup(`${track_name}`)
     }
 });
+
+poi.addLayer(sehenswürdigkeiten);
+    karte.addLayer(poi);
+    //Layer zur Kontrollstation oben rechts (ein- und ausschalten) hinzufügen
+    layerControl.addOverlay(poi, "Points of Interest");
+
 
 //Koordinaten anzeigen
 var hash = new L.Hash(karte);
