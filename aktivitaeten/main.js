@@ -34,8 +34,8 @@ kartenLayer.osm.addTo(karte);
 karte.addControl(new L.Control.Fullscreen());
 
 karte.setView(
-   [breite, laenge],
-   10
+    [breite, laenge],
+    10
 );
 
 //GPX GRuppe erstellen und Menü
@@ -50,15 +50,14 @@ const biken = new L.GPX("ebike.gpx", {
         startIconUrl: 'icons/pin-icon-start.png',
         endIconUrl: 'icons/pin-icon-end.png',
         shadowUrl: 'icons/pin-shadow.png',
-        iconSize: [32, 37] 
-}}).on("loaded", function (e) {
+        iconSize: [32, 37]
+    }
+}).on("loaded", function (e) {
+    console.log(e.target.get_name())
     karte.fitBounds(e.target.getBounds())
-    console.log ("name",e.target.get_name())
-    e.target.bindPopup(`${e.target.get_name()}`)
-}).addTo(bike).bindPopup("");
+}).addTo(bike);
 
-
- biken.on("addline", function(e) {
+biken.on("addline", function (e) {
     if (e.element.querySelector("name")) {
         // wenn es ein <name> Element gibt ...
         let track_name = e.element.querySelector("name").innerHTML;
@@ -80,8 +79,6 @@ const biken = new L.GPX("ebike.gpx", {
 var hash = new L.Hash(karte);
 var coords = new L.Control.Coordinates();
 coords.addTo(karte);
-karte.on('click', function(e) {
-	coords.setCoordinates(e);
+karte.on('click', function (e) {
+    coords.setCoordinates(e);
 });
-
-

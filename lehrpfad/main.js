@@ -55,12 +55,13 @@ const lehrpfade = new L.GPX("lehrpfad.gpx", {
         endIconUrl: 'icons/pin-icon-end.png',
         shadowUrl: 'icons/pin-shadow.png',
         iconSize: [32, 37]
-    }}).on("loaded", function (e) {
-        console.log (e.target.get_name())
+    }
+}).on("loaded", function (e) {
+    console.log(e.target.get_name())
     karte.fitBounds(e.target.getBounds())
 }).addTo(lehrweg);
 
-lehrpfade.on("addline", function(e) {
+lehrpfade.on("addline", function (e) {
     if (e.element.querySelector("name")) {
         // wenn es ein <name> Element gibt ...
         let track_name = e.element.querySelector("name").innerHTML;
@@ -68,6 +69,7 @@ lehrpfade.on("addline", function(e) {
     }
 });
 
+<<<<<<< HEAD
 //Koordinaten anzeigen
 var hash = new L.Hash(karte);
 var coords = new L.Control.Coordinates();
@@ -79,3 +81,6 @@ karte.on('click', function(e) {
 
 
 
+=======
+//biken.on("addline", function(e) {
+>>>>>>> 0152175003ab4ffa41c980956a72a4a87a9c9fb4
