@@ -48,7 +48,7 @@ sehenswürdigkeiten.clearLayers();
 const poi = new L.GPX("poi.gpx", {
     async: true,
     marker_options: {
-        IconUrl: 'icons/icon-see',
+        IconUrl: 'points of interest/icons/icon_see.png',
         iconSize: [32, 37] 
 }}).on("loaded", function (e) {
     karte.fitBounds(e.target.getBounds())
